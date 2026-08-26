@@ -1,9 +1,5 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-# Mesma coisa que `ruby server.rb`, com cara de executável.
-# $PROGRAM_NAME aqui é bin/server — por isso o start fica nesta linha,
-# não no `if __FILE__` do server.rb.
-
 require_relative "../server"
 TaskServer.new.start

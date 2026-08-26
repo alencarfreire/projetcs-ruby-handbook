@@ -36,7 +36,13 @@ projects/01-http-api/
 
 ## bin/server
 
-<<< @/projects/01-http-api/bin/server
+```ruby
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require_relative "../server"
+TaskServer.new.start
+```
 
 ## lib/task_server.rb
 

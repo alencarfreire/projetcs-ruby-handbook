@@ -69,7 +69,13 @@ O mesmo código que está em `projects/01-http-api`. Sem sair do handbook.
 
 ### bin/server
 
-<<< @/projects/01-http-api/bin/server
+```ruby
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require_relative "../server"
+TaskServer.new.start
+```
 
 ### lib/task_server.rb
 
