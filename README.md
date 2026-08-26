@@ -2,7 +2,7 @@
 
 > Projetos de bolso: do HTTP puro ao Rails. Código que roda + walkthrough em pt-BR de entrevista.
 
-**Em desenvolvimento.** Projeto 1 (HTTP API pura) no ar. Pet hotel entra na fase 2.
+**Em desenvolvimento.** Projetos 1 e 2 no ar.
 
 Site: https://alencarfreire.github.io/projetcs-ruby-handbook/
 
@@ -21,20 +21,16 @@ Formato inspirado no [Ruby/Rails Interview Handbook](https://github.com/alencarf
 
 ```
 docs/01-http-api/                 walkthrough 1.1 → 1.7
-projects/01-http-api/             código que sobe
-  README.md                       comandos e curls
-  bin/server
-  server.rb
-  lib/task_server.rb              TCP + HTTP
-  lib/router.rb                   rotas
-  lib/task_store.rb               Hash
+docs/02-pet-hotel/                walkthrough 2.1 → 2.8
+projects/01-http-api/             HTTP puro
+projects/02-pet-hotel/            Rails HTML
 ```
 
-## Já no ar (fases 0–1)
+## Já no ar (fases 0–2)
 
 - [Projetos e comandos](projetos.md)
 - [projects/01-http-api](projects/01-http-api) — `ruby server.rb`
-- Walkthrough [1.1](docs/01-http-api/01-o-problema.md) → [1.7](docs/01-http-api/07-como-rodar.md)
+- [projects/02-pet-hotel](projects/02-pet-hotel) — `bin/rails s` (login `joao@email.com` / `senha123`)
 
 ## Recorte dos projetos 1 e 2
 
@@ -44,9 +40,7 @@ Ruby 3.3+, stdlib (`socket` + `json`). Sem Rails, sem gem de web, sem banco. Sto
 
 ### 2. Pet hotel em Rails
 
-Rails 7.1+, SQLite, `has_secure_password`. Owners, pets, estadias. Telas HTML. Sem Devise, sem Hotwire, sem Sidekiq, sem API JSON.
-
-Entra na fase 2.
+Rails 8.1, SQLite, `has_secure_password`. Owners, pets, estadias. Telas HTML. Sem Devise, sem Hotwire, sem Sidekiq, sem API JSON.
 
 ## Entra depois
 

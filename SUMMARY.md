@@ -20,16 +20,17 @@ Código: [`projects/01-http-api`](projects/01-http-api)
 
 ## 2. Pet hotel em Rails
 
-Código: `projects/02-pet-hotel` — fase 2
+Código: [`projects/02-pet-hotel`](projects/02-pet-hotel)
 
-* 2.1 O problema e o recorte
-* 2.2 Models e migrations
-* 2.3 Auth com `has_secure_password`
-* 2.4 Owners e pets
-* 2.5 Estadia: entrada, saída, noites, total
-* 2.6 Validações que o entrevistador puxa
-* 2.7 Request specs
-* 2.8 Como rodar
+* [2.1 O problema e o recorte](docs/02-pet-hotel/01-o-problema.md)
+* [2.2 Models e migrations](docs/02-pet-hotel/02-models.md)
+* [2.3 Auth com `has_secure_password`](docs/02-pet-hotel/03-auth.md)
+* [2.4 Owners e pets](docs/02-pet-hotel/04-owners-pets.md)
+* [2.5 Estadia: entrada, saída, noites, total](docs/02-pet-hotel/05-estadia.md)
+* [2.6 Validações que o entrevistador puxa](docs/02-pet-hotel/06-validacoes.md)
+* [2.7 Request specs](docs/02-pet-hotel/07-request-specs.md)
+* [2.8 Como rodar](docs/02-pet-hotel/08-como-rodar.md)
+* [Código (models e auth)](docs/02-pet-hotel/codigo.md)
 
 ## Depois (não implementar agora)
 

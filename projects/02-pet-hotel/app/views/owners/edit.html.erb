@@ -1,0 +1,12 @@
+<% content_for :title, "Editar dono — Pousada do Thor" %>
+
+<header class="page-header">
+  <div class="page-copy">
+    <p class="eyebrow">Cadastro</p>
+    <h1>Editar dono</h1>
+  </div>
+</header>
+
+<%= render "form", owner: @owner %>
+
+<p class="back-link"><%= link_to "Voltar", @owner %></p>

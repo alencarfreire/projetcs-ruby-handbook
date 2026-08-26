@@ -6,20 +6,18 @@ Walkthrough é `docs/`. Código que sobe é `projects/`. Aqui está a pasta e o 
 
 ```
 projects-ruby-handbook/
-├── docs/                         walkthrough (entrevista)
-│   └── 01-http-api/              1.1 → 1.7
-└── projects/                     app que roda
-    └── 01-http-api/
-        ├── README.md             o que constrói, comandos, curls
-        ├── bin/server            executável
-        ├── server.rb             sobe a API
-        └── lib/
-            ├── task_server.rb    TCP + HTTP
-            ├── router.rb         method + path
-            └── task_store.rb     Hash em memória
+├── docs/
+│   ├── 01-http-api/              walkthrough 1.1 → 1.7
+│   └── 02-pet-hotel/             walkthrough 2.1 → 2.8
+└── projects/
+    ├── 01-http-api/              Ruby puro, stdlib
+    └── 02-pet-hotel/             Rails, SQLite, HTML
+        ├── README.md
+        ├── app/models/           User, Owner, Pet, Stay
+        ├── app/controllers/
+        ├── app/views/
+        └── spec/requests/
 ```
-
-O pet hotel (`projects/02-pet-hotel`) entra na fase 2. Pasta ainda não existe.
 
 ## 1. HTTP API pura
 
@@ -89,13 +87,23 @@ TaskServer.new.start
 
 <<< @/projects/01-http-api/lib/task_store.rb
 
-## 2. Pet hotel — ainda não
+## 2. Pet hotel (Pousada do Thor)
 
-Quando entrar:
+Fonte no handbook: [models e auth](/docs/02-pet-hotel/codigo). Como rodar: [README](/projects/02-pet-hotel/).
 
+### Como rodar
+
+```bash
+cd projects/02-pet-hotel
+bundle install
+bin/rails db:prepare
+bin/rails s
 ```
-projects/02-pet-hotel/     app Rails
-docs/02-pet-hotel/         walkthrough 2.1 → 2.8
+
+Abre `http://127.0.0.1:3000`. Login seed: `joao@email.com` / `senha123`.
+
+```bash
+bundle exec rspec
 ```
 
-Comando previsto: `bin/rails db:setup` e `bin/rails s`.
+Walkthrough: [2.1](/docs/02-pet-hotel/01-o-problema) → [2.8](/docs/02-pet-hotel/08-como-rodar).

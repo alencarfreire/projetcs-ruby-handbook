@@ -36,17 +36,17 @@ features:
 
 ## Estado
 
-**Em desenvolvimento.** Fases 0–1 (HTTP API pura). Pet hotel entra depois.
+**Em desenvolvimento.** Fases 0–2 (HTTP API + pet hotel).
 
 **Já dá para estudar**
-- [Pasta, comandos e fonte](/projetos) — o app inteiro, nesta página
-- [Código completo](/docs/01-http-api/codigo) — `server.rb` + `lib/`
-- [Como rodar](/projects/01-http-api/) — `ruby server.rb` e os curls
-- Walkthrough [1.1](/docs/01-http-api/01-o-problema) → [1.7](/docs/01-http-api/07-como-rodar)
+- [Pasta, comandos e fonte](/projetos)
+- Projeto 1: [código](/docs/01-http-api/codigo) · `ruby server.rb`
+- Projeto 2: [models e auth](/docs/02-pet-hotel/codigo) · `bin/rails s`
+- Walkthrough [1.1](/docs/01-http-api/01-o-problema) e [2.1](/docs/02-pet-hotel/01-o-problema)
 
 **Recorte dos projetos 1 e 2**
 - **1. HTTP API pura** — tasks, stdlib, memória. No ar
-- **2. Pet hotel** — Rails, owners, pets, estadias. Entra na fase 2
+- **2. Pet hotel** — Rails, owners, pets, estadias. No ar
 
 **Entra depois**
 - 3. Pet hotel API-only + JSON + token

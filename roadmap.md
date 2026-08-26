@@ -2,7 +2,7 @@
 
 Projetos de bolso. Código que roda + walkthrough. Tom do piloto (`docs/01-http-api/01-o-problema.md`) é lei.
 
-**Em desenvolvimento.** Fases 0–1 feitas. Pet hotel (fase 2) e o resto ainda vão entrar.
+**Em desenvolvimento.** Fases 0–2 feitas. API-only, Hotwire, Sidekiq e o resto ainda vão entrar.
 
 ## Fases
 
@@ -10,7 +10,7 @@ Projetos de bolso. Código que roda + walkthrough. Tom do piloto (`docs/01-http-
 |---|---|---|
 | 0 | Repo, GUIDE, VitePress, piloto 1.1 + esqueleto `GET /tasks` | feito |
 | 1 | Walkthrough 1.2–1.7 + API completa (verbos, 4xx, curls) | feito |
-| 2 | Projeto 2 inteiro (Rails + walkthrough 2.1–2.8) | depois |
+| 2 | Projeto 2 inteiro (Rails + walkthrough 2.1–2.8) | feito |
 | 3 | Sidebar, Pages (`/projetcs-ruby-handbook/`), aviso do que falta | em andamento |
 
 ## Já dá para estudar

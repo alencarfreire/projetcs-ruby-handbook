@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <title><%= content_for(:title) || "Pousada do Thor" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag :app %>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <%= link_to root_path, class: "brand" do %>
+          <span class="brand-name">Pousada do Thor</span>
+          <span class="brand-tag">Recepção</span>
+        <% end %>
+        <nav class="site-nav" aria-label="Principal">
+          <% if logged_in? %>
+            <%= link_to "Quem está no hotel", root_path, class: ("is-current" if current_page?(root_path)) %>
+            <%= link_to "Donos", owners_path, class: ("is-current" if request.path.start_with?("/owners")) %>
+            <%= link_to "Pets", pets_path, class: ("is-current" if request.path.start_with?("/pets")) %>
+            <%= link_to "Hospedagens", stays_path, class: ("is-current" if request.path.start_with?("/stays")) %>
+            <span class="nav-user"><%= current_user.name %></span>
+            <%= button_to "Sair", logout_path, method: :delete %>
+          <% else %>
+            <%= link_to "Entrar", login_path, class: ("is-current" if current_page?(login_path)) %>
+            <%= link_to "Cadastrar", signup_path, class: ("is-current" if current_page?(signup_path)) %>
+          <% end %>
+        </nav>
+      </div>
+    </header>
+
+    <% if notice.present? || alert.present? %>
+      <div class="flash-stack">
+        <% if notice.present? %>
+          <p class="notice" role="status"><%= notice %></p>
+        <% end %>
+        <% if alert.present? %>
+          <p class="alert" role="alert"><%= alert %></p>
+        <% end %>
+      </div>
+    <% end %>
+
+    <main class="site-main">
+      <%= yield %>
+    </main>
+  </body>
+</html>

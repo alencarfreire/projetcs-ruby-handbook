@@ -1,0 +1,19 @@
+<%= form_with model: owner, html: { class: "form-card" } do |f| %>
+  <%= render "shared/errors", record: owner %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.email_field :email, required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %>
+    <%= f.telephone_field :phone %>
+  </div>
+  <div class="form-actions">
+    <%= f.submit %>
+  </div>
+<% end %>

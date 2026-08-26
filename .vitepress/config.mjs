@@ -31,7 +31,24 @@ export default defineConfig({
         items: [
           { text: 'Pasta, comandos e fonte', link: '/projetos' },
           { text: '01 — como rodar', link: '/projects/01-http-api/' },
-          { text: '01 — código completo', link: '/docs/01-http-api/codigo' }
+          { text: '01 — código completo', link: '/docs/01-http-api/codigo' },
+          { text: '02 — como rodar', link: '/projects/02-pet-hotel/' },
+          { text: '02 — código (models e auth)', link: '/docs/02-pet-hotel/codigo' }
+        ]
+      },
+      {
+        text: '2. Pet hotel em Rails',
+        collapsed: false,
+        items: [
+          { text: '2.1 O problema e o recorte', link: '/docs/02-pet-hotel/01-o-problema' },
+          { text: '2.2 Models e migrations', link: '/docs/02-pet-hotel/02-models' },
+          { text: '2.3 Auth com has_secure_password', link: '/docs/02-pet-hotel/03-auth' },
+          { text: '2.4 Owners e pets', link: '/docs/02-pet-hotel/04-owners-pets' },
+          { text: '2.5 Estadia', link: '/docs/02-pet-hotel/05-estadia' },
+          { text: '2.6 Validações', link: '/docs/02-pet-hotel/06-validacoes' },
+          { text: '2.7 Request specs', link: '/docs/02-pet-hotel/07-request-specs' },
+          { text: '2.8 Como rodar', link: '/docs/02-pet-hotel/08-como-rodar' },
+          { text: 'Código (models e auth)', link: '/docs/02-pet-hotel/codigo' }
         ]
       },
       {

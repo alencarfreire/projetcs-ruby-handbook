@@ -1,0 +1,37 @@
+<% content_for :title, "Cadastro — Pousada do Thor" %>
+
+<header class="page-header">
+  <div class="page-copy">
+    <p class="eyebrow">Acesso</p>
+    <h1>Cadastro</h1>
+    <p class="lede">Crie sua conta para registrar donos, pets e hospedagens.</p>
+  </div>
+</header>
+
+<section class="auth-panel">
+  <%= form_with model: @user, url: signup_path do |f| %>
+    <%= render "shared/errors", record: @user %>
+
+    <div class="field">
+      <%= f.label :name, "Nome" %>
+      <%= f.text_field :name, required: true, autocomplete: "name" %>
+    </div>
+    <div class="field">
+      <%= f.label :email, "E-mail" %>
+      <%= f.email_field :email, required: true, autocomplete: "email" %>
+    </div>
+    <div class="field">
+      <%= f.label :password, "Senha" %>
+      <%= f.password_field :password, required: true, minlength: 8, autocomplete: "new-password" %>
+    </div>
+    <div class="field">
+      <%= f.label :password_confirmation, "Confirmação da senha" %>
+      <%= f.password_field :password_confirmation, required: true, minlength: 8, autocomplete: "new-password" %>
+    </div>
+    <div class="form-actions">
+      <%= f.submit "Cadastrar" %>
+    </div>
+  <% end %>
+
+  <p class="auth-switch">Já tem conta? <%= link_to "Entrar", login_path %></p>
+</section>

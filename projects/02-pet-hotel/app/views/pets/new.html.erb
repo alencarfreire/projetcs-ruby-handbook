@@ -1,0 +1,12 @@
+<% content_for :title, "Novo pet — Pousada do Thor" %>
+
+<header class="page-header">
+  <div class="page-copy">
+    <p class="eyebrow">Cadastro</p>
+    <h1>Novo pet</h1>
+  </div>
+</header>
+
+<%= render "form", pet: @pet %>
+
+<p class="back-link"><%= link_to "Voltar", pets_path %></p>
