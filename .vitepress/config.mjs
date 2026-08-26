@@ -6,7 +6,7 @@ export default defineConfig({
   lang: 'pt-BR',
 
   ignoreDeadLinks: true,
-  srcExclude: ['projects/**'],
+  srcExclude: ['projects/**/*.rb'],
 
   base: '/projetcs-ruby-handbook/',
 
@@ -19,11 +19,20 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: 'Início', link: '/' },
+      { text: 'Projetos', link: '/projetos' },
       { text: 'Roadmap', link: '/roadmap' },
       { text: 'GitHub', link: 'https://github.com/alencarfreire/projetcs-ruby-handbook' }
     ],
 
     sidebar: [
+      {
+        text: 'Projetos',
+        collapsed: false,
+        items: [
+          { text: 'Pasta e comandos', link: '/projetos' },
+          { text: '01 — HTTP API (código)', link: '/projects/01-http-api/' }
+        ]
+      },
       {
         text: '1. HTTP API pura',
         collapsed: false,

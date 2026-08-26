@@ -17,10 +17,20 @@ Cada projeto tem duas partes:
 
 Formato inspirado no [Ruby/Rails Interview Handbook](https://github.com/alencarfreire/ruby-handbook). Conteúdo escrito do zero — não é tradução.
 
+## Pasta
+
+```
+docs/01-http-api/          walkthrough 1.1 → 1.7
+projects/01-http-api/      código que sobe
+  README.md                comandos e curls
+  server.rb                API completa
+```
+
 ## Já no ar (fases 0–1)
 
+- [Projetos e comandos](projetos.md)
+- [projects/01-http-api](projects/01-http-api) — `ruby server.rb`
 - Walkthrough [1.1](docs/01-http-api/01-o-problema.md) → [1.7](docs/01-http-api/07-como-rodar.md)
-- [projects/01-http-api](projects/01-http-api) — CRUD de tasks, curls no README
 
 ## Recorte dos projetos 1 e 2
 
@@ -65,7 +75,7 @@ Regras em [`GUIDE.md`](GUIDE.md).
 ## Por onde começar
 
 - [O problema e o recorte](docs/01-http-api/01-o-problema.md)
-- [Como rodar o esqueleto](projects/01-http-api/README.md)
+- [Como rodar o projeto 1](projects/01-http-api/README.md)
 - [Roadmap](roadmap.md)
 
 ## Autoria

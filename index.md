@@ -7,11 +7,11 @@ hero:
   tagline: Em desenvolvimento. Projeto 1 no ar. Por IA com Vinícius Freire
   actions:
     - theme: brand
-      text: Começar
-      link: /docs/01-http-api/01-o-problema
+      text: Projetos e comandos
+      link: /projetos
     - theme: alt
-      text: Roadmap
-      link: /roadmap
+      text: Walkthrough
+      link: /docs/01-http-api/01-o-problema
     - theme: alt
       text: GitHub
       link: https://github.com/alencarfreire/projetcs-ruby-handbook
@@ -39,8 +39,9 @@ features:
 **Em desenvolvimento.** Fases 0–1 (HTTP API pura). Pet hotel entra depois.
 
 **Já dá para estudar**
-- Walkthrough [1.1 O problema](/docs/01-http-api/01-o-problema) até [1.7 curl](/docs/01-http-api/07-como-rodar)
-- `projects/01-http-api`: CRUD de tasks, curls no README
+- [Pasta, árvore e comandos](/projetos)
+- Código: [`projects/01-http-api`](/projects/01-http-api/) — `ruby server.rb`
+- Walkthrough [1.1](/docs/01-http-api/01-o-problema) → [1.7](/docs/01-http-api/07-como-rodar)
 
 **Recorte dos projetos 1 e 2**
 - **1. HTTP API pura** — tasks, stdlib, memória. No ar

@@ -1,6 +1,7 @@
 # Sumário
 
 * [Introdução](README.md)
+* [Projetos e comandos](projetos.md)
 * [Roadmap](roadmap.md)
 * [Guia](GUIDE.md)
 
