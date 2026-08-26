@@ -13,7 +13,7 @@ projects/01-http-api/
     task_store.rb        Hash + @next_id
 ```
 
-Código: [server.rb](https://github.com/alencarfreire/projetcs-ruby-handbook/blob/main/projects/01-http-api/server.rb) · [lib/](https://github.com/alencarfreire/projetcs-ruby-handbook/tree/main/projects/01-http-api/lib)
+Fonte no handbook: [código completo](/docs/01-http-api/codigo).
 
 ## O que você constrói
 

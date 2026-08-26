@@ -23,7 +23,7 @@ O pet hotel (`projects/02-pet-hotel`) entra na fase 2. Pasta ainda não existe.
 
 ## 1. HTTP API pura
 
-Código: [`projects/01-http-api`](/projects/01-http-api/) · [lib/ no GitHub](https://github.com/alencarfreire/projetcs-ruby-handbook/tree/main/projects/01-http-api/lib)
+Fonte na íntegra, neste handbook: [código completo](/docs/01-http-api/codigo). Como rodar: [README](/projects/01-http-api/).
 
 ### Como rodar
 
@@ -58,6 +58,30 @@ Três peças, três arquivos:
 Não é Rails. Sem Gemfile.
 
 Walkthrough: [1.1](/docs/01-http-api/01-o-problema) → [1.7](/docs/01-http-api/07-como-rodar).
+
+## Fonte — HTTP API
+
+O mesmo código que está em `projects/01-http-api`. Sem sair do handbook.
+
+### server.rb
+
+<<< @/projects/01-http-api/server.rb
+
+### bin/server
+
+<<< @/projects/01-http-api/bin/server
+
+### lib/task_server.rb
+
+<<< @/projects/01-http-api/lib/task_server.rb
+
+### lib/router.rb
+
+<<< @/projects/01-http-api/lib/router.rb
+
+### lib/task_store.rb
+
+<<< @/projects/01-http-api/lib/task_store.rb
 
 ## 2. Pet hotel — ainda não
 

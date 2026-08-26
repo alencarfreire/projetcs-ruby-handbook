@@ -39,8 +39,9 @@ features:
 **Em desenvolvimento.** Fases 0–1 (HTTP API pura). Pet hotel entra depois.
 
 **Já dá para estudar**
-- [Pasta, árvore e comandos](/projetos)
-- Código: [`projects/01-http-api`](/projects/01-http-api/) — `ruby server.rb`
+- [Pasta, comandos e fonte](/projetos) — o app inteiro, nesta página
+- [Código completo](/docs/01-http-api/codigo) — `server.rb` + `lib/`
+- [Como rodar](/projects/01-http-api/) — `ruby server.rb` e os curls
 - Walkthrough [1.1](/docs/01-http-api/01-o-problema) → [1.7](/docs/01-http-api/07-como-rodar)
 
 **Recorte dos projetos 1 e 2**

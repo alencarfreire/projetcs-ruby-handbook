@@ -29,8 +29,9 @@ export default defineConfig({
         text: 'Projetos',
         collapsed: false,
         items: [
-          { text: 'Pasta e comandos', link: '/projetos' },
-          { text: '01 — HTTP API (código)', link: '/projects/01-http-api/' }
+          { text: 'Pasta, comandos e fonte', link: '/projetos' },
+          { text: '01 — como rodar', link: '/projects/01-http-api/' },
+          { text: '01 — código completo', link: '/docs/01-http-api/codigo' }
         ]
       },
       {
@@ -43,7 +44,8 @@ export default defineConfig({
           { text: '1.4 JSON request/response', link: '/docs/01-http-api/04-json' },
           { text: '1.5 Store em memória', link: '/docs/01-http-api/05-store' },
           { text: '1.6 Status codes', link: '/docs/01-http-api/06-status-codes' },
-          { text: '1.7 Como rodar e testar com curl', link: '/docs/01-http-api/07-como-rodar' }
+          { text: '1.7 Como rodar e testar com curl', link: '/docs/01-http-api/07-como-rodar' },
+          { text: 'Código completo', link: '/docs/01-http-api/codigo' }
         ]
       }
     ],

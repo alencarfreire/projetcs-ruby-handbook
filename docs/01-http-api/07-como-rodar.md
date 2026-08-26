@@ -1,7 +1,7 @@
 # 1.7 Como rodar e testar com curl
 
 > **TL;DR**
-> Dois terminais. Um sobe `ruby server.rb`. O outro bate os curls do README. `curl -i` mostra status; `curl -s` mostra o body. POST precisa de `-H Content-Type` e `-d`. DELETE devolve 204 sem body. `Ctrl+C` zera o Hash — não é bug. O teste é o curl. minitest, se vier, é raso. O entrevistador quer ver você rodando, não o Postman.
+> Dois terminais. Um sobe `ruby server.rb`. O outro bate os curls do README. Fonte do app: [código completo](/docs/01-http-api/codigo) — sem sair do handbook. `curl -i` mostra status; `curl -s` mostra o body. POST precisa de `-H Content-Type` e `-d`. DELETE devolve 204 sem body. `Ctrl+C` zera o Hash — não é bug. O teste é o curl. minitest, se vier, é raso. O entrevistador quer ver você rodando, não o Postman.
 
 ## Conteúdo
 

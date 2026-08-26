@@ -16,6 +16,7 @@ Código: [`projects/01-http-api`](projects/01-http-api)
 * [1.5 Store em memória](docs/01-http-api/05-store.md)
 * [1.6 Status codes que caem em entrevista](docs/01-http-api/06-status-codes.md)
 * [1.7 Como rodar e testar com curl](docs/01-http-api/07-como-rodar.md)
+* [Código completo](docs/01-http-api/codigo.md)
 
 ## 2. Pet hotel em Rails
 
