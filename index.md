@@ -14,7 +14,7 @@ hero:
       link: /roadmap
     - theme: alt
       text: GitHub
-      link: https://github.com/alencarfreire/projects-ruby-handbook
+      link: https://github.com/alencarfreire/projetcs-ruby-handbook
 
 features:
   - icon: 🛠️
@@ -60,4 +60,4 @@ Detalhe no [roadmap](/roadmap).
 
 Formato inspirado no [Ruby/Rails Interview Handbook](https://github.com/alencarfreire/ruby-handbook). Conteúdo novo, em pt-BR, escrito por IA com [Vinícius Freire](https://github.com/alencarfreire).
 
-O código está no [GitHub](https://github.com/alencarfreire/projects-ruby-handbook).
+O código está no [GitHub](https://github.com/alencarfreire/projetcs-ruby-handbook).

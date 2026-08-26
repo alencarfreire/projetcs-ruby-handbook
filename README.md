@@ -4,6 +4,8 @@
 
 **Em desenvolvimento.** Projeto 1 (HTTP API pura) no ar. Pet hotel entra na fase 2.
 
+Site: https://alencarfreire.github.io/projetcs-ruby-handbook/
+
 Não é o [rails-handbook](https://github.com/alencarfreire/ruby-handbook) de novo. Lá é teoria. Aqui você constrói.
 
 ## Sobre o livro

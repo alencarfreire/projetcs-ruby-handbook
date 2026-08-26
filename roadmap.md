@@ -11,7 +11,7 @@ Projetos de bolso. Código que roda + walkthrough. Tom do piloto (`docs/01-http-
 | 0 | Repo, GUIDE, VitePress, piloto 1.1 + esqueleto `GET /tasks` | feito |
 | 1 | Walkthrough 1.2–1.7 + API completa (verbos, 4xx, curls) | feito |
 | 2 | Projeto 2 inteiro (Rails + walkthrough 2.1–2.8) | depois |
-| 3 | Sidebar, Pages (`/projects-ruby-handbook/`), aviso do que falta | depois |
+| 3 | Sidebar, Pages (`/projetcs-ruby-handbook/`), aviso do que falta | em andamento |
 
 ## Já dá para estudar
 

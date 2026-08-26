@@ -8,19 +8,19 @@ export default defineConfig({
   ignoreDeadLinks: true,
   srcExclude: ['projects/**'],
 
-  base: '/projects-ruby-handbook/',
+  base: '/projetcs-ruby-handbook/',
 
   head: [
     ['meta', { property: 'og:locale', content: 'pt_BR' }],
     ['meta', { property: 'og:title', content: 'Ruby Projects Handbook' }],
-    ['meta', { property: 'og:url', content: 'https://alencarfreire.github.io/projects-ruby-handbook/' }]
+    ['meta', { property: 'og:url', content: 'https://alencarfreire.github.io/projetcs-ruby-handbook/' }]
   ],
 
   themeConfig: {
     nav: [
       { text: 'Início', link: '/' },
       { text: 'Roadmap', link: '/roadmap' },
-      { text: 'GitHub', link: 'https://github.com/alencarfreire/projects-ruby-handbook' }
+      { text: 'GitHub', link: 'https://github.com/alencarfreire/projetcs-ruby-handbook' }
     ],
 
     sidebar: [
@@ -40,7 +40,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/alencarfreire/projects-ruby-handbook' }
+      { icon: 'github', link: 'https://github.com/alencarfreire/projetcs-ruby-handbook' }
     ],
 
     footer: {
