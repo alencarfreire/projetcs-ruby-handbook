@@ -2,13 +2,18 @@
 
 API JSON de tasks em Ruby puro. Sem Rails. Sem gem de web. Sem banco. Store em memória: some quando o processo morre.
 
-Código completo: [`server.rb`](https://github.com/alencarfreire/projetcs-ruby-handbook/blob/main/projects/01-http-api/server.rb). Um arquivo. É o recorte.
-
 ```
 projects/01-http-api/
-  README.md     este arquivo
-  server.rb     sobe a API
+  README.md              este arquivo
+  bin/server             executável
+  server.rb              sobe a API
+  lib/
+    task_server.rb       TCP + HTTP (request line, headers, body)
+    router.rb            method + path
+    task_store.rb        Hash + @next_id
 ```
+
+Código: [server.rb](https://github.com/alencarfreire/projetcs-ruby-handbook/blob/main/projects/01-http-api/server.rb) · [lib/](https://github.com/alencarfreire/projetcs-ruby-handbook/tree/main/projects/01-http-api/lib)
 
 ## O que você constrói
 
@@ -29,6 +34,8 @@ Ruby 3.3+. Sem `bundle`. Sem Gemfile.
 ```bash
 cd projects/01-http-api
 ruby server.rb
+# ou
+ruby bin/server
 ```
 
 Sobe em `http://127.0.0.1:4567`. `Ctrl+C` mata o processo. O Hash some. Isso é o recorte.

@@ -20,10 +20,14 @@ Formato inspirado no [Ruby/Rails Interview Handbook](https://github.com/alencarf
 ## Pasta
 
 ```
-docs/01-http-api/          walkthrough 1.1 → 1.7
-projects/01-http-api/      código que sobe
-  README.md                comandos e curls
-  server.rb                API completa
+docs/01-http-api/                 walkthrough 1.1 → 1.7
+projects/01-http-api/             código que sobe
+  README.md                       comandos e curls
+  bin/server
+  server.rb
+  lib/task_server.rb              TCP + HTTP
+  lib/router.rb                   rotas
+  lib/task_store.rb               Hash
 ```
 
 ## Já no ar (fases 0–1)
