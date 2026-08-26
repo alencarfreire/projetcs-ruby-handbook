@@ -13,7 +13,7 @@ bin/rails s
 
 Login: `joao@email.com` / `senha123`. Specs: `bundle exec rspec`.
 
-README: [como rodar](/projects/02-pet-hotel/). Walkthrough: [2.1](/docs/02-pet-hotel/01-o-problema) → [2.8](/docs/02-pet-hotel/08-como-rodar).
+Como rodar: veja o [código do pet hotel](/docs/02-pet-hotel/codigo). Walkthrough: [2.1](/docs/02-pet-hotel/01-o-problema) → [2.8](/docs/02-pet-hotel/08-como-rodar).
 
 ## Pasta
 

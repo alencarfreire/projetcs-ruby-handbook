@@ -21,7 +21,7 @@ projects-ruby-handbook/
 
 ## 1. HTTP API pura
 
-Fonte na íntegra, neste handbook: [código completo](/docs/01-http-api/codigo). Como rodar: [README](/projects/01-http-api/).
+Fonte na íntegra e como rodar, neste handbook: [código completo](/docs/01-http-api/codigo).
 
 ### Como rodar
 
@@ -41,7 +41,7 @@ curl -s http://127.0.0.1:4567/tasks
 # []
 ```
 
-CRUD, 4xx e o resto dos curls: [README do projeto](/projects/01-http-api/).
+CRUD, 4xx e o resto dos curls: [código completo](/docs/01-http-api/codigo).
 
 ### O que tem no arquivo
 
@@ -89,7 +89,7 @@ TaskServer.new.start
 
 ## 2. Pet hotel (Pousada do Thor)
 
-Fonte no handbook: [models e auth](/docs/02-pet-hotel/codigo). Como rodar: [README](/projects/02-pet-hotel/).
+Fonte e como rodar no handbook: [código do pet hotel](/docs/02-pet-hotel/codigo).
 
 ### Como rodar
 

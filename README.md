@@ -29,8 +29,8 @@ projects/02-pet-hotel/            Rails HTML
 ## Já no ar (fases 0–2)
 
 - [Projetos e comandos](projetos.md)
-- [projects/01-http-api](projects/01-http-api) — `ruby server.rb`
-- [projects/02-pet-hotel](projects/02-pet-hotel) — `bin/rails s` (login `joao@email.com` / `senha123`)
+- [Código completo do projeto 1](docs/01-http-api/codigo.md) — `ruby server.rb`
+- [Código do projeto 2](docs/02-pet-hotel/codigo.md) — `bin/rails s` (login `joao@email.com` / `senha123`)
 
 ## Recorte dos projetos 1 e 2
 
@@ -73,7 +73,7 @@ Regras em [`GUIDE.md`](GUIDE.md).
 ## Por onde começar
 
 - [O problema e o recorte](docs/01-http-api/01-o-problema.md)
-- [Como rodar o projeto 1](projects/01-http-api/README.md)
+- [Como rodar o projeto 1](docs/01-http-api/codigo.md)
 - [Roadmap](roadmap.md)
 
 ## Autoria

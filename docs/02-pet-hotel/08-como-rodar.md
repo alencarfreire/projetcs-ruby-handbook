@@ -25,7 +25,7 @@
 O app inteiro está neste livro. Você não precisa do GitHub para ler o código.
 
 **Como funciona:**
-Walkthrough é `docs/02-pet-hotel/`. Código que sobe é `projects/02-pet-hotel/`. A página [código (models e auth)](/docs/02-pet-hotel/codigo) cola a fonte. [Projetos](/projetos) tem a pasta e o comando. O [README](/projects/02-pet-hotel/) é o roteiro de cliques.
+Walkthrough é `docs/02-pet-hotel/`. Código que sobe é `projects/02-pet-hotel/`. A página [código (models e auth)](/docs/02-pet-hotel/codigo) cola a fonte. [Projetos](/projetos) tem a pasta e o comando. A [página de código](/docs/02-pet-hotel/codigo) traz o roteiro de cliques.
 
 No projeto 1 você lia `server.rb` na página de código e rodava `ruby server.rb`. Aqui é a mesma ideia com Rails: lê no handbook, sobe com `bin/rails s`. GitHub existe. Não é o único caminho. Na call, abre o handbook e o terminal.
 

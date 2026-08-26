@@ -5,7 +5,6 @@ export default defineConfig({
   description: 'Projetos de bolso: do HTTP puro ao Rails',
   lang: 'pt-BR',
 
-  ignoreDeadLinks: true,
   srcExclude: ['projects/**/*.rb'],
 
   base: '/projetcs-ruby-handbook/',

@@ -16,7 +16,7 @@ curl -s http://127.0.0.1:4567/tasks
 # []
 ```
 
-Curls do CRUD: [README do projeto](/projects/01-http-api/). Walkthrough: [1.1](/docs/01-http-api/01-o-problema) → [1.7](/docs/01-http-api/07-como-rodar).
+Curls do CRUD: veja o [código completo](/docs/01-http-api/codigo). Walkthrough: [1.1](/docs/01-http-api/01-o-problema) → [1.7](/docs/01-http-api/07-como-rodar).
 
 ## Pasta
 

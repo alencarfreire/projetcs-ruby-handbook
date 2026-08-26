@@ -7,7 +7,7 @@
 
 ## 1. HTTP API pura
 
-Código: [`projects/01-http-api`](projects/01-http-api)
+Código: [fonte completa](docs/01-http-api/codigo.md)
 
 * [1.1 O problema e o recorte](docs/01-http-api/01-o-problema.md)
 * [1.2 Servidor HTTP com stdlib](docs/01-http-api/02-servidor-http.md)
@@ -20,7 +20,7 @@ Código: [`projects/01-http-api`](projects/01-http-api)
 
 ## 2. Pet hotel em Rails
 
-Código: [`projects/02-pet-hotel`](projects/02-pet-hotel)
+Código: [fonte do pet hotel](docs/02-pet-hotel/codigo.md)
 
 * [2.1 O problema e o recorte](docs/02-pet-hotel/01-o-problema.md)
 * [2.2 Models e migrations](docs/02-pet-hotel/02-models.md)
