@@ -7,6 +7,11 @@ export default defineConfig({
 
   srcExclude: ['projects/**/*.rb'],
 
+  // README.md no GitHub. No site, /projects/foo/ precisa de index.html.
+  rewrites: {
+    'projects/:name/README.md': 'projects/:name/index.md'
+  },
+
   base: '/projetcs-ruby-handbook/',
 
   head: [
