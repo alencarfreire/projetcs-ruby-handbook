@@ -1,0 +1,64 @@
+name: ingressos-prod
+
+services:
+  proxy:
+    image: caddy:2-alpine
+    command: caddy reverse-proxy --from :80 --to web:9292
+    ports:
+      - "80:80"
+    depends_on:
+      - web
+
+  web:
+    build:
+      context: ../14-ingressos
+      dockerfile: Dockerfile
+    command: bash -c "bundle exec ruby bin/migrate && exec bundle exec puma -C config/puma.rb"
+    environment:
+      RACK_ENV: production
+      PORT: "9292"
+      WEB_CONCURRENCY: "1"
+      PUMA_THREADS: "5"
+      DATABASE_URL: postgres://ingressos:ingressos@postgres:5432/ingressos
+      REDIS_URL: redis://redis:6379/0
+      JWT_SECRET: ${JWT_SECRET:?JWT_SECRET obrigatório}
+      WEBHOOK_SECRET: ${WEBHOOK_SECRET:?WEBHOOK_SECRET obrigatório}
+      SIDEKIQ: "1"
+    healthcheck:
+      test: ["CMD", "ruby", "-e", "require 'net/http'; abort unless Net::HTTP.get_response(URI('http://127.0.0.1:9292/up')).is_a?(Net::HTTPSuccess)"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    depends_on:
+      - postgres
+      - redis
+
+  worker:
+    build:
+      context: ../14-ingressos
+      dockerfile: Dockerfile
+    command: bash -c "bundle exec ruby bin/migrate && exec bundle exec sidekiq -r ./jobs/sidekiq.rb"
+    environment:
+      RACK_ENV: production
+      DATABASE_URL: postgres://ingressos:ingressos@postgres:5432/ingressos
+      REDIS_URL: redis://redis:6379/0
+      JWT_SECRET: ${JWT_SECRET:?JWT_SECRET obrigatório}
+      WEBHOOK_SECRET: ${WEBHOOK_SECRET:?WEBHOOK_SECRET obrigatório}
+    depends_on:
+      - postgres
+      - redis
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: ingressos
+      POSTGRES_PASSWORD: ingressos
+      POSTGRES_DB: ingressos
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+
+volumes:
+  pg-data:

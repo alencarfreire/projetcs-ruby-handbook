@@ -1,0 +1,9 @@
+# O build context é ../05-pet-hotel-sidekiq — o .dockerignore que vale
+# está lá. Este arquivo documenta o recorte.
+
+tmp
+log
+storage
+.git
+vendor/bundle
+*.sqlite3

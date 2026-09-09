@@ -1,0 +1,36 @@
+name: pousada-thor
+
+services:
+  web:
+    build:
+      context: ../05-pet-hotel-sidekiq
+      dockerfile: Dockerfile
+    command: bash -c "bin/rails db:prepare && exec bin/rails s -b 0.0.0.0 -p 3000"
+    ports:
+      - "3000:3000"
+    environment:
+      RAILS_ENV: development
+      REDIS_URL: redis://redis:6379/0
+    volumes:
+      - sqlite-data:/app/storage
+    depends_on:
+      - redis
+
+  worker:
+    build:
+      context: ../05-pet-hotel-sidekiq
+      dockerfile: Dockerfile
+    command: bash -c "bin/rails db:prepare && exec bundle exec sidekiq -C config/sidekiq.yml"
+    environment:
+      RAILS_ENV: development
+      REDIS_URL: redis://redis:6379/0
+    volumes:
+      - sqlite-data:/app/storage
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7-alpine
+
+volumes:
+  sqlite-data:

@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "sequel"
+require_relative "../db"
+
+Sequel.extension :migration
+Sequel::Migrator.run(DB, File.expand_path("../migrate", __dir__))
+puts "migrate ok"

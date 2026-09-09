@@ -1,0 +1,40 @@
+<% content_for :title, "Pets — Pousada do Thor" %>
+
+<header class="page-header">
+  <div class="page-copy">
+    <p class="eyebrow">Cadastro</p>
+    <h1>Pets</h1>
+    <p class="lede">Animais cadastrados na pousada.</p>
+  </div>
+  <%= link_to "Novo pet", new_pet_path, class: "button" %>
+</header>
+
+<% if @pets.empty? %>
+  <p class="empty">Nenhum pet cadastrado. <%= link_to "Cadastrar o primeiro", new_pet_path %>.</p>
+<% else %>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Nome</th>
+          <th scope="col">Espécie</th>
+          <th scope="col">Dono</th>
+          <th scope="col"><span class="visually-hidden">Ações</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @pets.each do |pet| %>
+          <tr>
+            <td><%= link_to pet.name, pet %></td>
+            <td><%= pet.species %></td>
+            <td><%= pet.owner.name %></td>
+            <td class="cell-actions">
+              <%= link_to "Editar", edit_pet_path(pet) %>
+              <%= button_to "Remover", pet, method: :delete %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<% end %>

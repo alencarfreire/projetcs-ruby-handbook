@@ -1,0 +1,43 @@
+<% stays = local_assigns.fetch(:stays, @stays) %>
+<section class="occupancy-board">
+  <header class="page-header">
+    <div class="page-copy">
+      <p class="eyebrow">Recepção</p>
+      <h1>Quem está no hotel agora</h1>
+      <p class="lede">Painel ao vivo. Check-in ou check-out em outra janela atualiza este quadro — WebSocket, não reload.</p>
+    </div>
+    <p class="occupancy-count">
+      <strong><%= stays.size %></strong>
+      <span><%= stays.size == 1 ? "hospedado" : "hospedados" %></span>
+    </p>
+  </header>
+
+  <% if stays.empty? %>
+    <p class="empty">Nenhum pet hospedado no momento. <%= link_to "Ver hospedagens", stays_path %>.</p>
+  <% else %>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Pet</th>
+            <th scope="col">Dono</th>
+            <th scope="col">Check-in</th>
+            <th scope="col">Check-out</th>
+            <th scope="col" class="num">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% stays.each do |stay| %>
+            <tr>
+              <td class="pet-name"><%= stay.pet.name %></td>
+              <td><%= stay.owner.name %></td>
+              <td><%= l(stay.check_in) %></td>
+              <td><%= l(stay.check_out) %></td>
+              <td class="num"><%= format_money(stay.total_cents) %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  <% end %>
+</section>

@@ -1,0 +1,14 @@
+<% content_for :title, "Hospedagem de #{@stay.pet.name} — Pousada do Thor" %>
+
+<header class="page-header">
+  <div class="page-copy">
+    <p class="eyebrow">Hospedagem</p>
+    <h1>Hospedagem de <%= @stay.pet.name %></h1>
+  </div>
+  <div class="record-actions">
+    <%= link_to "Editar", edit_stay_path(@stay), class: "button" %>
+    <%= link_to "Hospedagens", stays_path, class: "button-secondary" %>
+  </div>
+</header>
+
+<%= render "stays/stay", stay: @stay %>

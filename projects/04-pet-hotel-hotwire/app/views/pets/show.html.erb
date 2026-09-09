@@ -1,0 +1,25 @@
+<% content_for :title, "#{@pet.name} — Pousada do Thor" %>
+
+<header class="page-header">
+  <div class="page-copy">
+    <p class="eyebrow">Pet</p>
+    <h1><%= @pet.name %></h1>
+  </div>
+  <div class="record-actions">
+    <%= link_to "Editar", edit_pet_path(@pet), class: "button" %>
+    <%= link_to "Pets", pets_path, class: "button-secondary" %>
+  </div>
+</header>
+
+<article class="record-card">
+  <dl class="facts">
+    <div>
+      <dt>Espécie</dt>
+      <dd><%= @pet.species %></dd>
+    </div>
+    <div>
+      <dt>Dono</dt>
+      <dd><%= link_to @pet.owner.name, @pet.owner %></dd>
+    </div>
+  </dl>
+</article>

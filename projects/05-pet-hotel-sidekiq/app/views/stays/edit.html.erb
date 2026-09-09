@@ -1,0 +1,12 @@
+<% content_for :title, "Editar hospedagem — Pousada do Thor" %>
+
+<header class="page-header">
+  <div class="page-copy">
+    <p class="eyebrow">Agenda</p>
+    <h1>Editar hospedagem</h1>
+  </div>
+</header>
+
+<%= render "form", stay: @stay %>
+
+<p class="back-link"><%= link_to "Voltar", @stay %></p>

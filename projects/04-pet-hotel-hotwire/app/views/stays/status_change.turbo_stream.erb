@@ -1,0 +1,11 @@
+<%= turbo_stream.replace "occupancy" do %>
+  <%= render "occupancy/board" %>
+<% end %>
+
+<%= turbo_stream.replace @stay do %>
+  <%= render "stays/stay", stay: @stay %>
+<% end %>
+
+<%= turbo_stream.update "flash-stack" do %>
+  <%= render "shared/flash", notice: @flash_notice, alert: @flash_alert %>
+<% end %>

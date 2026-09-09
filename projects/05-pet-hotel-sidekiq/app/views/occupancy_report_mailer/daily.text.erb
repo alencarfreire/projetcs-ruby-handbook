@@ -1,0 +1,13 @@
+Olá <%= @user.name %>,
+
+Hospedados agora: <%= @stays.size %>.
+
+<% if @stays.empty? %>
+Nenhum pet no hotel.
+<% else %>
+<% @stays.each do |stay| %>
+- <%= stay.pet.name %> (<%= stay.owner.name %>), até <%= l(stay.check_out) %>
+<% end %>
+<% end %>
+
+— Pousada do Thor

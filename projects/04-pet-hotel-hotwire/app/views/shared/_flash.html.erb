@@ -1,0 +1,8 @@
+<% n = local_assigns[:notice] || flash[:notice] %>
+<% a = local_assigns[:alert] || flash[:alert] %>
+<% if n.present? %>
+  <p class="notice" role="status"><%= n %></p>
+<% end %>
+<% if a.present? %>
+  <p class="alert" role="alert"><%= a %></p>
+<% end %>

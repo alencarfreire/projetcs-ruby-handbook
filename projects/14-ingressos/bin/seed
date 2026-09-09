@@ -1,0 +1,46 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "bcrypt"
+require "sequel"
+require_relative "../db"
+
+Sequel.extension :migration
+Sequel::Migrator.run(DB, File.expand_path("../migrate", __dir__))
+
+def account(email)
+  row = DB[:accounts].where(email: email).first
+  return row[:id] if row
+
+  DB[:accounts].insert(
+    email: email,
+    password_hash: BCrypt::Password.create("senha123"),
+    status: 2
+  )
+end
+
+joao = account("joao@email.com")
+account("maria@email.com")
+
+local = DB[:locais].where(name: "Sala 2").first
+local_id = local ? local[:id] : DB[:locais].insert(name: "Sala 2")
+
+evento = DB[:eventos].where(title: "Sunset Jazz").first
+evento_id = if evento
+  evento[:id]
+else
+  DB[:eventos].insert(title: "Sunset Jazz", venue: "Sala 2", starts_at: Time.new(2026, 11, 7, 20, 0, 0))
+end
+
+unless DB[:lotes].where(evento_id: evento_id, name: "Pista").first
+  DB[:lotes].insert(
+    evento_id: evento_id,
+    name: "Pista",
+    price_cents: 8000,
+    quantity: 50,
+    sales_starts_at: Time.new(2026, 1, 1),
+    sales_ends_at: Time.new(2026, 11, 7, 19, 0, 0)
+  )
+end
+
+puts "seed ok. João=#{joao} local=#{local_id} evento=#{evento_id} senha=senha123"

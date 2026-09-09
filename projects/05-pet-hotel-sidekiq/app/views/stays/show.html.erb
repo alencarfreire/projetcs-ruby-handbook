@@ -1,0 +1,60 @@
+<% content_for :title, "Hospedagem de #{@stay.pet.name} — Pousada do Thor" %>
+
+<header class="page-header">
+  <div class="page-copy">
+    <p class="eyebrow">Hospedagem</p>
+    <h1>Hospedagem de <%= @stay.pet.name %></h1>
+  </div>
+  <div class="record-actions">
+    <%= link_to "Editar", edit_stay_path(@stay), class: "button" %>
+    <%= link_to "Hospedagens", stays_path, class: "button-secondary" %>
+  </div>
+</header>
+
+<article class="record-card">
+  <dl class="facts">
+    <div>
+      <dt>Pet</dt>
+      <dd><%= link_to @stay.pet.name, @stay.pet %></dd>
+    </div>
+    <div>
+      <dt>Dono</dt>
+      <dd><%= link_to @stay.owner.name, @stay.owner %></dd>
+    </div>
+    <div>
+      <dt>Check-in</dt>
+      <dd><%= l(@stay.check_in) %></dd>
+    </div>
+    <div>
+      <dt>Check-out</dt>
+      <dd><%= l(@stay.check_out) %></dd>
+    </div>
+    <div>
+      <dt>Diárias</dt>
+      <dd><%= @stay.nights %></dd>
+    </div>
+    <div>
+      <dt>Diária</dt>
+      <dd><%= format_money(@stay.nightly_rate_cents) %></dd>
+    </div>
+    <div>
+      <dt>Total</dt>
+      <dd><%= format_money(@stay.total_cents) %></dd>
+    </div>
+    <div>
+      <dt>Status</dt>
+      <dd><span class="status status-<%= @stay.status %>"><%= stay_status_label(@stay.status) %></span></dd>
+    </div>
+  </dl>
+
+  <% if @stay.scheduled? || @stay.checked_in? %>
+    <div class="stay-actions">
+      <% if @stay.scheduled? %>
+        <%= button_to "Fazer check-in", check_in_stay_path(@stay), method: :post %>
+      <% end %>
+      <% if @stay.checked_in? %>
+        <%= button_to "Fazer check-out", check_out_stay_path(@stay), method: :post %>
+      <% end %>
+    </div>
+  <% end %>
+</article>

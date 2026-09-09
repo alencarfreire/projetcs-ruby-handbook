@@ -1,0 +1,7 @@
+Olá <%= @stay.user.name %>,
+
+<%= @pet.name %> está com check-out hoje (<%= l(@stay.check_out) %>).
+Dono: <%= @stay.owner.name %>.
+Total: <%= @stay.total_cents %> centavos (<%= @stay.nights %> diárias).
+
+— Pousada do Thor

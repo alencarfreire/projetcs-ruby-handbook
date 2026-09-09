@@ -1,0 +1,5 @@
+<p>Olá <%= @stay.user.name %>,</p>
+<p><strong><%= @pet.name %></strong> está com check-out hoje (<%= l(@stay.check_out) %>).</p>
+<p>Dono: <%= @stay.owner.name %>.</p>
+<p>Total: <%= @stay.total_cents %> centavos (<%= @stay.nights %> diárias).</p>
+<p>— Pousada do Thor</p>

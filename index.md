@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: Ruby Projects Handbook
-  text: Do HTTP puro ao Rails. Você constrói.
-  tagline: Em desenvolvimento. Projeto 1 no ar. Por IA com Vinícius Freire
+  text: Do HTTP puro ao Rails e ao Roda. Você constrói.
+  tagline: Trilhas 1–8 e 9–15 no ar. Por IA com Vinícius Freire
   actions:
     - theme: brand
       text: Projetos e comandos
@@ -27,7 +27,7 @@ features:
 
   - icon: 🚂
     title: Rails no bolso
-    details: Depois, pet hotel com SQLite e has_secure_password. Telas, flash, request spec.
+    details: "Pet hotel em Rails. Trilha à parte com Roda, Sequel e Rodauth — domínio de ingressos."
 
   - icon: 🎯
     title: Na entrevista
@@ -36,25 +36,20 @@ features:
 
 ## Estado
 
-**Em desenvolvimento.** Fases 0–2 (HTTP API + pet hotel).
+Trilhas 1–8 (hotel/Rails) e 9–15 (ingressos/Roda) no ar. Independentes. O 2 não ganha Hotwire: o 4 ganha. O 9 não é o hotel.
 
 **Já dá para estudar**
 - [Pasta, comandos e fonte](/projetos)
 - Projeto 1: [código](/docs/01-http-api/codigo) · `ruby server.rb`
 - Projeto 2: [models e auth](/docs/02-pet-hotel/codigo) · `bin/rails s`
-- Walkthrough [1.1](/docs/01-http-api/01-o-problema) e [2.1](/docs/02-pet-hotel/01-o-problema)
-
-**Recorte dos projetos 1 e 2**
-- **1. HTTP API pura** — tasks, stdlib, memória. No ar
-- **2. Pet hotel** — Rails, owners, pets, estadias. No ar
-
-**Entra depois**
-- 3. Pet hotel API-only + JSON + token
-- 4. Hotwire (quadro de ocupação)
-- 5. Sidekiq (lembrete e relatório)
-- 6. Action Cable (painel ao vivo)
-- 7. Docker Compose
-- 8. System design do hotel
+- Projeto 3: [API + token](/docs/03-pet-hotel-api/codigo)
+- Projeto 4: [quadro Hotwire](/docs/04-pet-hotel-hotwire/codigo)
+- Projeto 5: [Sidekiq](/docs/05-pet-hotel-sidekiq/codigo)
+- Projeto 6: [Cable](/docs/06-pet-hotel-cable/codigo)
+- Projeto 7: [compose](/docs/07-pet-hotel-docker/codigo)
+- Capítulo 8: [system design](/docs/08-system-design/01-o-problema)
+- 9 [Roda](/docs/09-roda/01-o-problema) · 10 [Sequel](/docs/10-sequel/01-o-problema) · 11 [A](/docs/11-roda-pragmatic/01-o-problema) · 12 [B](/docs/12-roda-modular/01-o-problema) · 13 [C/D](/docs/13-roda-arquiteturas/01-mapa)
+- 14 [Ingressos](/docs/14-ingressos/01-o-problema) · 15 [Deploy](/docs/15-ingressos-ops/01-o-problema)
 
 Detalhe no [roadmap](/roadmap).
 

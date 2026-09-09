@@ -1,0 +1,27 @@
+<% content_for :title, "Entrar — Pousada do Thor" %>
+
+<header class="page-header">
+  <div class="page-copy">
+    <p class="eyebrow">Acesso</p>
+    <h1>Entrar</h1>
+    <p class="lede">Use o e-mail e a senha da sua conta.</p>
+  </div>
+</header>
+
+<section class="auth-panel">
+  <%= form_with url: login_path do %>
+    <div class="field">
+      <label for="email">E-mail</label>
+      <%= email_field_tag :email, params[:email], required: true, id: "email", autocomplete: "email" %>
+    </div>
+    <div class="field">
+      <label for="password">Senha</label>
+      <%= password_field_tag :password, nil, required: true, id: "password", autocomplete: "current-password" %>
+    </div>
+    <div class="form-actions">
+      <%= submit_tag "Entrar" %>
+    </div>
+  <% end %>
+
+  <p class="auth-switch">Não tem conta? <%= link_to "Cadastre-se", signup_path %></p>
+</section>

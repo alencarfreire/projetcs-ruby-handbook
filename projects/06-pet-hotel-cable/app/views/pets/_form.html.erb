@@ -1,0 +1,19 @@
+<%= form_with model: pet, html: { class: "form-card" } do |f| %>
+  <%= render "shared/errors", record: pet %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :species %>
+    <%= f.text_field :species, required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :owner_id %>
+    <%= f.collection_select :owner_id, current_user.owners.order(:name), :id, :name, { prompt: "Escolha o dono" } %>
+  </div>
+  <div class="form-actions">
+    <%= f.submit %>
+  </div>
+<% end %>

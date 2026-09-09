@@ -1,0 +1,46 @@
+<% content_for :title, "Hospedagens — Pousada do Thor" %>
+
+<header class="page-header">
+  <div class="page-copy">
+    <p class="eyebrow">Agenda</p>
+    <h1>Hospedagens</h1>
+    <p class="lede">Reservas, check-ins e check-outs.</p>
+  </div>
+  <%= link_to "Nova hospedagem", new_stay_path, class: "button" %>
+</header>
+
+<% if @stays.empty? %>
+  <p class="empty">Nenhuma hospedagem cadastrada. <%= link_to "Registrar a primeira", new_stay_path %>.</p>
+<% else %>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Pet</th>
+          <th scope="col">Dono</th>
+          <th scope="col">Check-in</th>
+          <th scope="col">Check-out</th>
+          <th scope="col">Status</th>
+          <th scope="col" class="num">Total</th>
+          <th scope="col"><span class="visually-hidden">Ações</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @stays.each do |stay| %>
+          <tr>
+            <td><%= link_to stay.pet.name, stay %></td>
+            <td><%= stay.owner.name %></td>
+            <td><%= l(stay.check_in) %></td>
+            <td><%= l(stay.check_out) %></td>
+            <td><span class="status status-<%= stay.status %>"><%= stay_status_label(stay.status) %></span></td>
+            <td class="num"><%= format_money(stay.total_cents) %></td>
+            <td class="cell-actions">
+              <%= link_to "Editar", edit_stay_path(stay) %>
+              <%= button_to "Remover", stay, method: :delete %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<% end %>

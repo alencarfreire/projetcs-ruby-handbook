@@ -1,0 +1,12 @@
+<p>Olá <%= @user.name %>,</p>
+<p>Hospedados agora: <strong><%= @stays.size %></strong>.</p>
+<% if @stays.empty? %>
+<p>Nenhum pet no hotel.</p>
+<% else %>
+<ul>
+  <% @stays.each do |stay| %>
+    <li><%= stay.pet.name %> (<%= stay.owner.name %>), até <%= l(stay.check_out) %></li>
+  <% end %>
+</ul>
+<% end %>
+<p>— Pousada do Thor</p>

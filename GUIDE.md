@@ -176,6 +176,89 @@ WEBrick saiu da stdlib no Ruby 3. Não puxamos gem de web só para manter o nome
 - Telas HTML. Sem API JSON neste projeto
 - Teste: RSpec request spec nos fluxos principais. Sem coverage theatre
 
+**Projeto 3 — Pet hotel API-only**
+
+- Mesmo domínio do 2. `config.api_only = true`
+- `has_secure_token :api_token` + `Authorization: Bearer`. Sem JWT
+- Hash explícito no `render json:`. Sem Jbuilder
+- 401 sem token; 404 no recurso de outro user
+- Teste: request spec com `as: :json`
+
+**Projeto 4 — Hotwire**
+
+- Cópia HTML do 2 + `turbo-rails` + importmap
+- Frame no quadro de ocupação. Stream no check-in/check-out
+- Sem Stimulus. Sem Cable (outra aba não atualiza — recorte)
+- Teste: request spec do mime turbo-stream
+
+**Projeto 5 — Sidekiq**
+
+- Cópia HTML do 2 + Sidekiq + Redis
+- Lembrete: `wait_until` no check-in. Relatório: rake `reports:daily`
+- Sem `sidekiq-cron`. Mailer `:file` / `:test`
+- Adapter `:sidekiq` em dev/prod, `:test` no spec
+- Teste: `have_enqueued_job` + `perform_now`. Sem Redis no CI
+
+**Projeto 6 — Action Cable**
+
+- Cópia HTML do 2 + Cable + importmap
+- Connection lê session. Channel `stream_for current_user`
+- Broadcast no controller. JS `innerHTML`. Sem `turbo_stream_from`
+- Adapter `async` / `test`. Redis adapter fica para 7/8
+- Teste: channel spec + `have_broadcasted_to`
+
+**Projeto 7 — Docker Compose**
+
+- Empacota o 5. Sem app Rails nesta pasta
+- Serviços: web, worker, redis. SQLite no volume. Development
+- Sem Postgres, sem `RAILS_ENV=production`
+
+**Capítulo 8 — System design**
+
+- Sem `projects/08`. Prática de quadro
+- Reusa o domínio 2–7. Sem código novo
+
+**Trilha ingressos (independente da Pousada)**
+
+**Projeto 9 — Roda sozinho**
+
+- Roda + Puma. Sem Sequel, sem Rodauth
+- Eventos num Hash. `r.on "eventos"`
+- Teste: curl
+
+**Projeto 10 — Sequel sozinho**
+
+- Sequel + SQLite. Sem HTTP
+- `DB[:eventos]` devolve Hash. Model opcional
+- `bin/seed`, `examples/`
+
+**Projeto 11 — A pragmática**
+
+- Roda + Sequel + Rodauth JWT (`json: :only`)
+- Um `app.rb`, um `db.rb`. Dataset no route
+- Sem hash_routes, sem lote
+
+**Projeto 12 — B hash_routes**
+
+- `hash_branch` eventos e locais
+- `app.rb` orquestrador. Cadeado no ramo
+
+**Capítulo 13 — C hexagonal e D dry-rb**
+
+- Sem `projects/13`. Quadro
+- Venda (lote, webhook) implementada no 14
+
+**Projeto 14 — Ingressos (produto)**
+
+- Lotes, reserva UPDATE condicional, webhook HMAC, denylist
+- Sidekiq::Job, mail arquivo, `/up`, DATABASE_URL
+- Teste: minitest + rack-test
+
+**Projeto 15 — Docker dos ingressos**
+
+- web, worker, postgres, redis
+- compose.prod: secret obrigatório, proxy :80
+
 ---
 
 ## Critério de arquivo pronto
@@ -196,4 +279,4 @@ WEBrick saiu da stdlib no Ruby 3. Não puxamos gem de web só para manter o nome
 - Não é tradução do php-handbook
 - Não é tutorial de gem
 - Não ensina Rails 4
-- Não mistura domínio: projeto 1 = tasks; projeto 2 = hotel de pets
+- Não mistura domínio: projeto 1 = tasks; projetos 2–8 = hotel; projetos 9–15 = ingressos (trilha Roda independente)

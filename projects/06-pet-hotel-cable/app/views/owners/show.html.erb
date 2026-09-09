@@ -1,0 +1,25 @@
+<% content_for :title, "#{@owner.name} — Pousada do Thor" %>
+
+<header class="page-header">
+  <div class="page-copy">
+    <p class="eyebrow">Dono</p>
+    <h1><%= @owner.name %></h1>
+  </div>
+  <div class="record-actions">
+    <%= link_to "Editar", edit_owner_path(@owner), class: "button" %>
+    <%= link_to "Donos", owners_path, class: "button-secondary" %>
+  </div>
+</header>
+
+<article class="record-card">
+  <dl class="facts">
+    <div>
+      <dt>E-mail</dt>
+      <dd><%= @owner.email %></dd>
+    </div>
+    <div>
+      <dt>Telefone</dt>
+      <dd><%= @owner.phone.presence || "—" %></dd>
+    </div>
+  </dl>
+</article>

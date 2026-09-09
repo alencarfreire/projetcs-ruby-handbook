@@ -16,3 +16,11 @@ package-lock.json
 .vitepress/dist
 .vitepress/cache
 .temp/
+
+# Rails runtime (todas as cópias em projects/)
+projects/*/log/
+projects/*/tmp/
+projects/*/storage/
+projects/*/vendor/
+projects/*/*.sqlite3
+projects/*/config/master.key

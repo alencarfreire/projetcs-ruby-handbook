@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "sequel"
+require_relative "../db"
+
+Sequel.extension :migration
+Sequel::Migrator.run(DB, File.expand_path("../migrate", __dir__))
+
+if DB[:eventos].where(title: "Sunset Jazz").empty?
+  DB[:eventos].insert(
+    title: "Sunset Jazz",
+    venue: "Sala 2",
+    starts_at: Time.new(2026, 11, 7, 20, 0, 0)
+  )
+end
+
+puts "seed ok. Eventos: #{DB[:eventos].count}"

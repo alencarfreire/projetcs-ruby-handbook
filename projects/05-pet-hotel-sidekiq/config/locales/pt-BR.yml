@@ -1,0 +1,51 @@
+pt-BR:
+  helpers:
+    submit:
+      create: "Criar %{model}"
+      update: "Atualizar %{model}"
+  activerecord:
+    models:
+      user: "Usuário"
+      owner: "Dono"
+      pet: "Pet"
+      stay: "Hospedagem"
+    attributes:
+      user:
+        name: "Nome"
+        email: "E-mail"
+        password: "Senha"
+        password_confirmation: "Confirmação da senha"
+      owner:
+        name: "Nome"
+        email: "E-mail"
+        phone: "Telefone"
+      pet:
+        name: "Nome"
+        species: "Espécie"
+        owner: "Dono"
+        owner_id: "Dono"
+      stay:
+        pet: "Pet"
+        pet_id: "Pet"
+        check_in: "Check-in"
+        check_out: "Check-out"
+        nightly_rate_cents: "Diária (centavos)"
+        status: "Status"
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      blank: "não pode ficar em branco"
+      taken: "já está em uso"
+      invalid: "não é válido"
+      too_short: "é muito curto (mínimo: %{count} caracteres)"
+      greater_than: "deve ser maior que %{count}"
+      not_a_number: "não é um número"
+      confirmation: "não confere com a senha"
+  date:
+    formats:
+      default: "%d/%m/%Y"
+    day_names: [domingo, segunda-feira, terça-feira, quarta-feira, quinta-feira, sexta-feira, sábado]
+    abbr_day_names: [dom, seg, ter, qua, qui, sex, sáb]
+    month_names: [~, janeiro, fevereiro, março, abril, maio, junho, julho, agosto, setembro, outubro, novembro, dezembro]
+    abbr_month_names: [~, jan, fev, mar, abr, mai, jun, jul, ago, set, out, nov, dez]
+    order: [day, month, year]

@@ -1,0 +1,40 @@
+<% content_for :title, "Donos — Pousada do Thor" %>
+
+<header class="page-header">
+  <div class="page-copy">
+    <p class="eyebrow">Cadastro</p>
+    <h1>Donos</h1>
+    <p class="lede">Pessoas responsáveis pelos pets hospedados.</p>
+  </div>
+  <%= link_to "Novo dono", new_owner_path, class: "button" %>
+</header>
+
+<% if @owners.empty? %>
+  <p class="empty">Nenhum dono cadastrado. <%= link_to "Cadastrar o primeiro", new_owner_path %>.</p>
+<% else %>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Nome</th>
+          <th scope="col">E-mail</th>
+          <th scope="col">Telefone</th>
+          <th scope="col"><span class="visually-hidden">Ações</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @owners.each do |owner| %>
+          <tr>
+            <td><%= link_to owner.name, owner %></td>
+            <td><%= owner.email %></td>
+            <td><%= owner.phone.presence || "—" %></td>
+            <td class="cell-actions">
+              <%= link_to "Editar", edit_owner_path(owner) %>
+              <%= button_to "Remover", owner, method: :delete, form: { data: { turbo: false } } %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<% end %>

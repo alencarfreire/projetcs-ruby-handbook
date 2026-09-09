@@ -1,0 +1,8 @@
+tmp
+log
+storage
+.git
+vendor/bundle
+*.sqlite3
+node_modules
+.DS_Store

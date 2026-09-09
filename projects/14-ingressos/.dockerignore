@@ -1,0 +1,6 @@
+storage
+tmp
+log
+.git
+test
+*.sqlite3

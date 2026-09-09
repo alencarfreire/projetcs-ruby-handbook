@@ -1,0 +1,28 @@
+<%= form_with model: stay, html: { class: "form-card" } do |f| %>
+  <%= render "shared/errors", record: stay %>
+
+  <div class="field">
+    <%= f.label :pet_id %>
+    <%= f.collection_select :pet_id, current_user.pets.order(:name), :id, :name, { prompt: "Escolha o pet" } %>
+  </div>
+  <div class="field">
+    <%= f.label :check_in %>
+    <%= f.date_field :check_in, required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :check_out %>
+    <%= f.date_field :check_out, required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :nightly_rate_cents %>
+    <%= f.number_field :nightly_rate_cents, min: 1, step: 1, required: true %>
+  </div>
+  <p class="hint">Diária em centavos. Exemplo: 8000 = R$ 80,00. Não use casas decimais.</p>
+  <div class="field">
+    <%= f.label :status %>
+    <%= f.select :status, Stay.statuses.keys.map { |s| [stay_status_label(s), s] } %>
+  </div>
+  <div class="form-actions">
+    <%= f.submit %>
+  </div>
+<% end %>
